@@ -1,6 +1,5 @@
 <html>
     <head>
-    <link rel="stylesheet" href="bower_components/flag-icon-css/css/flag-icon.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="bower_components/animate.css/animate.css">
@@ -8,7 +7,7 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="app.js"></script>
     </head>
-    <body ng-app="tictactoe">
+    <body ng-app="tictactoe" class="front">
      <div ng-controller="GameCtrl as game">
      <button ng-repeat="button in b1" 
         ng-disabled="button.disabled" 
@@ -31,7 +30,11 @@
         {{button.name}}
      </button>
      <br><br><br><br>
-     <h1 align="center">{{game.checking}}</h1>
+     <h1 class="answer style2">{{game.checking}}</h1>
+    
+    
+    
+    
     </div>
         
     </body>
