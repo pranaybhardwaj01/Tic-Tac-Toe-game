@@ -1,0 +1,47 @@
+.style1 
+{  
+   height:100px;
+   width:200px;
+   position: relative;left: 40%;
+   margin-top: 20px;
+   margin-bottom:20px;
+}
+.style2
+{
+    font-size: 50px;
+}
+.btnstyle
+{
+    height:3em;
+   width:4em;
+   position:relative;left :45%
+}
+.opstyle
+{
+   height:100px;;
+   width:100px;
+   position:relative;left :35%;
+   font-size: 25px;
+   margin-top: 10px;
+   margin-left: 5px;
+}
+.answer{
+    text-align: center;
+    font:italic;
+    color: green;
+}
+body {
+    background-image: url(bck.jpg);
+}
+.score{
+    text-align: center;
+    color: purple;
+}
+.front{
+    background-image: url(bck.jpg);
+}
+.head{
+    text-align: center;
+    font:italic;
+    color: black;
+}
