@@ -6,7 +6,8 @@ tictactoe.controller('GameCtrl', ['$scope',
     game=this;
     game.winner="";
     game.checking="";
-    game.gstatus=undefined;
+    game.gstatus="none";
+    console.log(game.gstatus);
 
     $scope.b1 = [{
       "name": ".",

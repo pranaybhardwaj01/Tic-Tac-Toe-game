@@ -33,6 +33,7 @@
      <h1 ng-if="game.gstatus==undefined" class="drawst">{{game.checking}}</h1>
      <h1 ng-if="game.gstatus==true" class="answer2 style3">{{game.checking}}</h1>
      <h1 ng-if="game.gstatus==false" class="answer1 style2">{{game.checking}}</h1>
+     <div ng-if="game.gstatus==undefined||game.gstatus==true||game.gstatus==false"><button class="btnreset">Reset</button></div>
     
     </div>
         
