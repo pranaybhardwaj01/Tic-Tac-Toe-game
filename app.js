@@ -6,45 +6,37 @@ tictactoe.controller('GameCtrl', ['$scope',
     game=this;
     game.winner="";
     game.checking="";
+    game.gstatus=undefined;
 
     $scope.b1 = [{
       "name": ".",
-      "disabled": false,
-      "id": "1"
+      "disabled": false
     }, {
       "name": ".",
-      "disabled": false,
-      "id": "2"
+      "disabled": false
     }, {
       "name": ".",
-      "disabled": false,
-      "id": "3"
+      "disabled": false
     }] 
     $scope.b2=[{
       "name": ".",
-      "disabled": false,
-      "id": "4"
+      "disabled": false
     }, {
       "name": ".",
-      "disabled": false,
-      "id": "5"
+      "disabled": false
     }, {
       "name": ".",
-      "disabled": false,
-      "id": "6"
+      "disabled": false
     }]
     $scope.b3=[{
       "name": ".",
-      "disabled": false,
-      "id": "7"
+      "disabled": false
     }, {
       "name": ".",
-      "disabled": false,
-      "id": "8"
+      "disabled": false
     }, {
       "name": ".",
-      "disabled": false,
-      "id": "9"
+      "disabled": false
     }]
 
 var count=0;
@@ -74,13 +66,18 @@ $scope.gameGen=function(b){
       if(game.winner=="x")
    {
       game.checking="X is the Winner"
+      game.gstatus=true;
     }
     else if(game.winner=="o")
     {
       game.checking="O is the Winner"
+      game.gstatus=false;
     }
     else if(count==9&&(game.checking!="x"||game.checking!="o"))
-      game.checking="Game is Draw"
+      {
+        game.checking="Game is Draw"
+        game.gstatus=undefined;
+      }  
     console.log(game.checking)
   } 
     
