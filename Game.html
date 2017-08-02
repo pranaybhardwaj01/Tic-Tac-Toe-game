@@ -30,7 +30,9 @@
         {{button.name}}
      </button>
      <br><br><br><br>
-     <h1 class="answer style2" ng-class="{'answer1 style2':!game.gstatus,'answer2 style3':game.gstatus}">{{game.checking}}</h1> 
+     <h1 ng-if="game.gstatus==undefined" class="drawst">{{game.checking}}</h1>
+     <h1 ng-if="game.gstatus==true" class="answer2 style3">{{game.checking}}</h1>
+     <h1 ng-if="game.gstatus==false" class="answer1 style2">{{game.checking}}</h1>
     
     </div>
         

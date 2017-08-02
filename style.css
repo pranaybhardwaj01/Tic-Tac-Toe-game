@@ -14,6 +14,13 @@
 {
     background-color: lightcoral;
 }
+.drawst
+{
+    text-align: center;
+    font:italic;
+    color: blue;
+    background-color: lightskyblue;
+}
 .btnstyle
 {
     height:3em;
