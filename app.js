@@ -4,11 +4,12 @@ var tictactoe = angular.module('tictactoe', []);
 tictactoe.controller('GameCtrl', ['$scope',
   function($scope) {
     game=this;
+    $scope.gamestart=function(){
+    game.start=true;
     game.winner="";
     game.checking="";
     game.gstatus="none";
     console.log(game.gstatus);
-
     $scope.b1 = [{
       "name": ".",
       "disabled": false
@@ -83,6 +84,7 @@ $scope.gameGen=function(b){
   } 
     
 }
+    }
   }
   
 ]);
