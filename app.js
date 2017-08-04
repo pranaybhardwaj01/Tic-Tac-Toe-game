@@ -81,10 +81,8 @@ $scope.gameGen=function(b){
         game.gstatus=undefined;
       }  
     console.log(game.checking)
-  } 
-    
-}
-    }
+   } 
   }
-  
+ }
+} 
 ]);
