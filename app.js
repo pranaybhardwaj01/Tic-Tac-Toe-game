@@ -1,4 +1,3 @@
-
 var tictactoe = angular.module('tictactoe', []);
 
 tictactoe.controller('GameCtrl', ['$scope',
@@ -41,11 +40,15 @@ tictactoe.controller('GameCtrl', ['$scope',
       "disabled": false
     }]
 
+
 var count=0;
 var status=true;
+
 $scope.gameGen=function(b){
+  
   game.arr=[];
   status=!status;
+   
    if(status&&count<9)
    { 
     count++;
@@ -55,14 +58,18 @@ $scope.gameGen=function(b){
    {
     count++;
     b.name="o";
-   }  
- if(($scope.b1[0].name==$scope.b1[1].name&&$scope.b1[0].name==$scope.b1[2].name&&$scope.b1[0].name!=".")||($scope.b3[0].name==$scope.b3[1].name&&$scope.b3[1].name==$scope.b3[2].name&&$scope.b3[0].name!=".")||($scope.b2[0].name==$scope.b2[1].name&&$scope.b2[1].name==$scope.b2[2].name&&$scope.b2[0].name!="."))
+   }
+
+  if(($scope.b1[0].name==$scope.b1[1].name&&$scope.b1[0].name==$scope.b1[2].name&&$scope.b1[0].name!=".")||($scope.b3[0].name==$scope.b3[1].name&&$scope.b3[1].name==$scope.b3[2].name&&$scope.b3[0].name!=".")||($scope.b2[0].name==$scope.b2[1].name&&$scope.b2[1].name==$scope.b2[2].name&&$scope.b2[0].name!="."))
    game.winner=b.name;
+  
   else if(($scope.b1[0].name==$scope.b2[0].name&&$scope.b1[0].name==$scope.b3[0].name&&$scope.b1[0].name!=".")||($scope.b1[1].name==$scope.b2[1].name&&$scope.b1[1].name==$scope.b3[1].name&&$scope.b1[1].name!=".")||($scope.b1[2].name==$scope.b2[2].name&&$scope.b1[2].name==$scope.b3[2].name&&$scope.b1[2].name!="."))
-  game.winner=b.name;
- else if(($scope.b1[0].name==$scope.b2[1].name&&$scope.b1[0].name==$scope.b3[2].name&&$scope.b1[0].name!=".")||($scope.b1[2].name==$scope.b2[1].name&&$scope.b1[2].name==$scope.b3[0].name&&$scope.b1[2].name!="."))
-  game.winner=b.name; 
-  b.disabled=true;
+   game.winner=b.name;
+
+  else if(($scope.b1[0].name==$scope.b2[1].name&&$scope.b1[0].name==$scope.b3[2].name&&$scope.b1[0].name!=".")||($scope.b1[2].name==$scope.b2[1].name&&$scope.b1[2].name==$scope.b3[0].name&&$scope.b1[2].name!="."))
+   game.winner=b.name; 
+  
+   b.disabled=true;
     $scope.check = function(){
     console.log(game.winner);
       if(game.winner=="x")
