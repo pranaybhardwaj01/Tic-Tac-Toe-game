@@ -76,16 +76,25 @@ $scope.gameGen=function(b){
    {
       game.checking="X is the Winner"
       game.gstatus=true;
+      $scope.b1[0].disabled=true;$scope.b1[1].disabled=true;$scope.b1[2].disabled=true;
+      $scope.b2[0].disabled=true;$scope.b2[1].disabled=true;$scope.b2[2].disabled=true;
+      $scope.b3[0].disabled=true;$scope.b3[2].disabled=true;$scope.b3[2].disabled=true;
     }
     else if(game.winner=="o")
     {
       game.checking="O is the Winner"
       game.gstatus=false;
+      $scope.b1[0].disabled=true;$scope.b1[1].disabled=true;$scope.b1[2].disabled=true;
+      $scope.b2[0].disabled=true;$scope.b2[1].disabled=true;$scope.b2[2].disabled=true;
+      $scope.b3[0].disabled=true;$scope.b3[2].disabled=true;$scope.b3[2].disabled=true;
     }
     else if(count==9&&(game.checking!="x"||game.checking!="o"))
       {
         game.checking="Game is Draw"
         game.gstatus=undefined;
+      $scope.b1[0].disabled=true;$scope.b1[1].disabled=true;$scope.b1[2].disabled=true;
+      $scope.b2[0].disabled=true;$scope.b2[1].disabled=true;$scope.b2[2].disabled=true;
+      $scope.b3[0].disabled=true;$scope.b3[1].disabled=true;$scope.b3[2].disabled=true;
       }  
     console.log(game.checking)
    } 
