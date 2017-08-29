@@ -9,6 +9,13 @@
     </head>
     <body ng-app="tictactoe" class="front">
      <div ng-controller="GameCtrl as game">
+       <div><h1>Scores</h1></div>
+       <span class="style4" style="padding-right:68px;">Player 1 </span>
+       <span class="style4">Player 2</span>
+       <br>
+       <span style="padding-right:120px;padding-left:10px;">{{game.p1}}</span>
+       <span>{{game.p2}}</span>
+       <br>
      <button ng-repeat="button in b1" 
         ng-disabled="button.disabled" 
         ng-click="gameGen(button) ; check()"
