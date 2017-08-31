@@ -9,12 +9,14 @@
     </head>
     <body ng-app="tictactoe" class="front">
      <div ng-controller="GameCtrl as game">
-       <div><h1>Scores</h1></div>
+       <div align="center" class="stylehead">TIC TAC TOE</div>
+       <div align="center"><h1>Scores</h1>
        <span class="style4" style="padding-right:68px;">Player 1 </span>
        <span class="style4">Player 2</span>
        <br>
        <span style="padding-right:120px;padding-left:10px;">{{game.p1}}</span>
        <span>{{game.p2}}</span>
+       </div>
        <br>
      <button ng-repeat="button in b1" 
         ng-disabled="button.disabled" 
@@ -36,11 +38,11 @@
         class="opstyle">
         {{button.name}}
      </button>
-     <br><br><br><br>
+     <br><br><br>
      <h1 ng-if="game.gstatus==undefined" class="drawst">{{game.checking}}</h1>
      <h1 ng-if="game.gstatus==true" class="answer2 style3">{{game.checking}}</h1>
      <h1 ng-if="game.gstatus==false" class="answer1 style2">{{game.checking}}</h1>
-     <div ng-if="game.gstatus==undefined||game.gstatus==true||game.gstatus==false"><button class="btnreset" ng-click="gamestart()">{{game.start?'Rematch':'Start'}}</button></div>
+     <div ng-if="game.gstatus==undefined||game.gstatus==true||game.gstatus==false"><button class="btnreset" ng-click="gamestart()">{{game.start?'Replay':'Start'}}</button></div>
     </div>        
   </body>
 </html>
