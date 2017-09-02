@@ -10,7 +10,7 @@
     <body ng-app="tictactoe" class="front">
      <div ng-controller="GameCtrl as game">
        <div align="center" class="stylehead">TIC TAC TOE</div>
-       <div align="center"><h1>Scores</h1>
+       <div ng-if="game.start" style="padding-left:550px;" ><h1 style="padding-left:40px;">Scores</h1>
        <span class="style4" style="padding-right:68px;">Player 1 </span>
        <span class="style4">Player 2</span>
        <br>
